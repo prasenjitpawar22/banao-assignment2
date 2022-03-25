@@ -1,0 +1,91 @@
+### register
+POST http://localhost:10001/api/register
+content-type: application/json
+
+{
+    "username": "newUser",
+    "password" : "pass",
+    "email": "user123@gmail.com"
+}
+
+### login
+POST http://localhost:10001/api/login
+Content-Type: application/json
+
+{
+    "username": "newUser",
+    "password" : "pass"
+}
+###
+### forgot password
+### 
+### generate link
+POST http://localhost:10001/api/forgot-password
+Content-Type: application/json
+
+{
+        "email": "user123@gmail.com"
+
+}
+### process the link
+POST http://localhost:10001/link/http://localhost:10001/623b45a51117304ae27bbc89/7db9056bb63c85bca1ac01121c1b65046377d5359d07e2210c27a655fccbecba
+Content-Type: application/json
+
+{
+    "password": "newPass123@"
+}
+
+### create post
+POST http://localhost:10001/api/create-post
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjIzYjQ2NzM4ZjAxM2ZhYTQ4OWVmNzBmIiwidXNlcm5hbWUiOiJhYmhpIiwiaWF0IjoxNjQ4MTM1MTcwLCJleHAiOjE2NDgxNDIzNzB9.ISgsESE_YNq3vLH0mWIM4HUpITiGG5NOsgEDh1F0UaA
+
+{
+    "description": "making a post",
+    "image": "image.jpg"
+}
+
+### get all posts (feeds)
+GET http://localhost:10001/api/all-post
+
+
+### update a post
+POST http://localhost:10001/api/post-update/623c8c1e52efa752a79908b2
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjIzYjQ2NzM4ZjAxM2ZhYTQ4OWVmNzBmIiwidXNlcm5hbWUiOiJhYmhpIiwiaWF0IjoxNjQ4MTMzMTYxLCJleHAiOjE2NDgxNDAzNjF9.r8qGD8P11_gXkm3bcUhxbYiE3aXrTwfQlgdhdY4wf-M
+
+{
+    "description": "hello this is my first post updated",
+    "image": "image.jpg"
+}
+
+### delete a post
+POST http://localhost:10001/api/post-delete/623b55bb531d5bed13f89809
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjIzYjQ2NzM4ZjAxM2ZhYTQ4OWVmNzBmIiwidXNlcm5hbWUiOiJhYmhpIiwiaWF0IjoxNjQ4MTMzMTYxLCJleHAiOjE2NDgxNDAzNjF9.r8qGD8P11_gXkm3bcUhxbYiE3aXrTwfQlgdhdY4wf-M
+
+ 
+###
+### add a like and comment api
+###
+POST http://localhost:10001/api/post-like/623b55bb531d5bed13f89809
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjIzYjQ2NzM4ZjAxM2ZhYTQ4OWVmNzBmIiwidXNlcm5hbWUiOiJhYmhpIiwiaWF0IjoxNjQ4MTMzMTYxLCJleHAiOjE2NDgxNDAzNjF9.r8qGD8P11_gXkm3bcUhxbYiE3aXrTwfQlgdhdY4wf-M
+
+{
+    "like": "1"
+}
+
+###
+POST http://localhost:10001/api/post-comment/623b55bb531d5bed13f89809
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjIzYjQ2NzM4ZjAxM2ZhYTQ4OWVmNzBmIiwidXNlcm5hbWUiOiJhYmhpIiwiaWF0IjoxNjQ4MTMzMTYxLCJleHAiOjE2NDgxNDAzNjF9.r8qGD8P11_gXkm3bcUhxbYiE3aXrTwfQlgdhdY4wf-M
+
+{
+    "comment": "this is the second comment"
+}
+
+
+
+
+ 
